@@ -9,7 +9,7 @@ try{
     const resul= req.body.map(e=>{
         const funcion= func[e.fn];
         if (funcion) throw new Error("Operacion no soportada!!");
-        return {...e,resultado: funcion.value(e.op1, e.op2)}
+        return {...e,resultado: funcion(e.op1, e.op2)};
     })
     res.status(201).json(resul);
 }catch(e){
