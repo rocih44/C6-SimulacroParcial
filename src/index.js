@@ -8,6 +8,7 @@ app.post('/operaciones', (req,res)=>{
 try{
     const resul= req.body.map(e=>{
         const funcion= func.find(o=>o.name == e.fn);
+        if (funcion) throw new Error("Operacion no soportada!!");
         return {...e,resultado: funcion.value(e.op1, e.op2)}
     })
     res.status(201).json(resul);
