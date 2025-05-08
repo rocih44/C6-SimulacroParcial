@@ -1,6 +1,6 @@
 console.log("Prueba");
 
-/*const funciones = [
+const funciones = [
     {
         name:'suma',
         value: (a,b)=> a+b,
@@ -21,16 +21,7 @@ console.log("Prueba");
         name:'resto',
         value: (a,b)=> a%b,
     }
-]*/
-
-const funciones = {
-    'suma': (a,b)=> a+b,
-    'resta': (a,b)=> a-b,
-    'div': (a,b)=> a/b,
-    'mult': (a,b)=> a*b,
-    'resto': (a,b)=> a%b,
-
-}
+]
 
 module.exports= funciones;
 
